@@ -46,6 +46,7 @@ class ServiceController extends Controller
             $Service->icon = $icon;
             // can after add this icon remove from array
         }*/
+        $Service->icon = request()->icon;
         $Service->paragraph=$data['paragraph'];
         $Service->type=request()->type;
         $Service->save();

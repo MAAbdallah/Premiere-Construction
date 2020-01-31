@@ -213,6 +213,42 @@
         </div>
         <!--// Features Area -->
 
+        <!-- Funfact Area -->
+        <div  class="tm-section funfact-area tm-padding-section tm-parallax" data-bgimage="assets/images/funfact/funfact-bg.jpg"
+              data-black-overlay="8">
+            <div class="funfact-areashape">
+                <img src="assets/images/funfact/funfact-shape.png" alt="funfact area shape">
+            </div>
+            <div class="container">
+                <div class="row mt-30-reverse">
+                    @php
+                        $icons = ['flaticon-check-mark','flaticon-smile','flaticon-email','flaticon-trophy'];
+                        $counts = ['500','3210','2345','159'];
+                        $heading = ['Projects Complete','Happy Clients','Mail Conversation','Awards'];
+                        $size =count($icons);
+                    @endphp
+                    @for($i =0;$i<$size;$i++)
+                        <!-- Funfact Single -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-30">
+                            <div class="tm-funfact">
+                                    <span class="tm-funfact-icon">
+                                        <i class="{{$icons[$i]}}"></i>
+                                    </span>
+                                <div class="tm-funfact-content">
+                                    <span class="odometer" data-count-to="{{$counts[$i]}}"></span>
+                                    <h5>{{$heading[$i]}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// Funfact Single -->
+                    @endfor
+                </div>
+            </div>
+        </div>
+        <!--// Funfact Area -->
+
+
+
     </main>
     <!--// Main Content -->
 </div>
