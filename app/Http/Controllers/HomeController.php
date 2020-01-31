@@ -28,8 +28,8 @@ class HomeController extends Controller
         $Sliders = slider::orderBy('id', 'asc')->paginate(6) ;
         $AboutUs = aboutUs::first();
         $AboutUs_services = aboutUs_service::all();
-        $Service = service::paginate(9);
-
-        return view('home',compact('Sliders','AboutUs','AboutUs_services','Service'));
+        $Service = service::where('type','Service')->paginate(9);
+        $feature = service::where('type','Feature')->get();
+        return view('home',compact('Sliders','AboutUs','AboutUs_services','Service','feature'));
     }
 }

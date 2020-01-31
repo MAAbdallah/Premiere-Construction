@@ -248,6 +248,36 @@
         <!--// Funfact Area -->
 
 
+        <!-- Services Area -->
+        <div id="Services" class="tm-section services-area tm-padding-section bg-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 col-12">
+                        <div class="tm-section-title text-center">
+                            <h2>Facilities We Provide</h2>
+                            <p>Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem
+                                an cule dicta iriure at phaedrum. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row services-wrap">
+                    @foreach($feature as $F)
+                    <!-- Single Service -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 wow fadeInUp">
+                        <div class="tm-service text-center">
+                                <span class="tm-service-icon">
+                                    <i class="{{$F->icon}}"></i>
+                                </span>
+                            <h5><a href="service-details.html">{{$F->title}}</a></h5>
+                            <p>{{$F->paragraph}}</p>
+                        </div>
+                    </div>
+                    <!--// Single Service -->
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        <!--// Services Area -->
 
     </main>
     <!--// Main Content -->
