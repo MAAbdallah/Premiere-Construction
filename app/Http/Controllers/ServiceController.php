@@ -20,6 +20,12 @@ class ServiceController extends Controller
         dd($Services,$count);
         #return view('home',compact('Services','count'));
     }
+    public function show($id) {
+
+        $service = service::find($id);
+        return view('ServiceD.show', compact('service'));
+    }
+
     public function create()
     {
         return view('ServiceD.create');

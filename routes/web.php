@@ -24,6 +24,8 @@ Route::post('/ab','AboutController@store');
 
 Route::get('/sr/create', 'ServiceController@create');
 Route::post('/sr','ServiceController@store');
+Route::get('/sr/{id}','ServiceController@show')->name('service.show');
+
 
 
 

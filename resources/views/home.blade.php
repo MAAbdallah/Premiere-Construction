@@ -268,7 +268,7 @@
                                 <span class="tm-service-icon">
                                     <i class="{{$F->icon}}"></i>
                                 </span>
-                            <h5><a href="service-details.html">{{$F->title}}</a></h5>
+                            <h5><a href="{{url('sr/'.$F->id)}}">{{$F->title}}</a></h5>
                             <p>{{$F->paragraph}}</p>
                         </div>
                     </div>
