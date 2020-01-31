@@ -16,11 +16,14 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/s/create', 'SliderController@create');
-Route::post('/s','SliderController@store');
+Route::get('/sl/create', 'SliderController@create');
+Route::post('/sl','SliderController@store');
 
-Route::get('/a/create', 'AboutController@create');
-Route::post('/a','AboutController@store');
+Route::get('/ab/create', 'AboutController@create');
+Route::post('/ab','AboutController@store');
+
+Route::get('/sr/create', 'ServiceController@create');
+Route::post('/sr','ServiceController@store');
 
 
 

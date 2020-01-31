@@ -172,6 +172,47 @@
         </div>
         <!--// About Us Area -->
 
+        <!-- Features Area -->
+        <div class="tm-section features-area bg-grey tm-padding-section">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-xl-9 col-lg-12">
+                        <div class="features-slider-active tm-slider-dots tm-slider-dots-vertical">
+                            @php
+                                $index=0;
+                                $stop = 3;
+                            @endphp
+                            @for($i =0;$i<3;$i++)
+                            <div class="features-slider-row">
+                                @while($index<$stop)
+                                <!-- Single Feature -->
+                                <div class="tm-feature text-center">
+                                        <span class="tm-feature-icon">
+                                            <i class="{{$Service[$index]->icon}}"></i>
+                                        </span>
+                                    <h5>{{$Service[$index]->title}}</h5>
+                                    <p>{{$Service[$index]->paragraph}}</p>
+                                </div>
+                                <!--// Single Feature -->
+                                    @php
+                                        $index+=1;
+                                    @endphp
+                                @endwhile
+                            </div>
+                                @php
+                                    $stop+=3;
+                                @endphp
+                            @endfor
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-image">
+                <img class="wow fadeInLeft" src="{{asset('images/others/feature-image.png')}}" alt="feature image">
+            </div>
+        </div>
+        <!--// Features Area -->
+
     </main>
     <!--// Main Content -->
 </div>
