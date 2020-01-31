@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $Services = service::orderBy('id', 'asc')->paginate(5) ;

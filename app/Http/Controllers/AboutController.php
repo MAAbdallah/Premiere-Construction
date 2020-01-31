@@ -9,6 +9,11 @@ use Intervention\Image\Facades\Image;
 class AboutController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $Abouts = aboutUs::orderBy('id', 'asc')->paginate(5) ;
