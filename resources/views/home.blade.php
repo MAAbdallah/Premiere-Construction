@@ -310,6 +310,57 @@
         <!--// Testimonial Area -->
 
 
+        <!-- Latest Blog Area -->
+        <div id="news" class="tm-section latest-blog-area tm-padding-section bg-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <div class="tm-section-title text-center">
+                            <h2>Latest Blog Post</h2>
+                            <p>Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem
+                                an cule dicta iriure at phaedrum. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row blog-slider-active">
+
+                <!-- Single Blog -->
+                <div class="col">
+                    <div class="tm-blog">
+                        <div class="tm-blog-image">
+                            <img src="assets/images/blog/blog-image-1.jpg" alt="blog image">
+                        </div>
+                        <div class="tm-blog-content">
+                            <h4><a href="blog-details.html">A special day at the new office</a></h4>
+                            <div class="tm-blog-meta">
+                                <span>By <a href="blog.html">Keely</a></span>
+                                <span>Tuesday, Sep 26, 2018</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, in quodsi vulputat pro. Ius illum vocent mediocritatem
+                                an cule dicta iriure at phaedrum. </p>
+                            <div class="tm-blog-contentbottom">
+                                <a href="blog-details.html" class="tm-readmore">Read more <i class="fas fa-chevron-right"></i></a>
+                                <a href="blog-details.html">Comment 02</a>
+                            </div>
+                        </div>
+                        <div class="tm-blog-social">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-skype"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--// Single Blog -->
+
+            </div>
+        </div>
+        <!--// Latest Blog Area -->
+
+
     </main>
     <!--// Main Content -->
 </div>

@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="paragraph" class="col-md-4 col-form-label">Slider paragraph</label>
+                    <label for="paragraph" class="col-md-4 col-form-label">paragraph</label>
 
                     <input id="paragraph"
                            type="text"
@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="row">
-                    <label for="image" class="col-md-4 col-form-label">Slider Image</label>
+                    <label for="image" class="col-md-4 col-form-label">test Image</label>
 
                     <input type="file" class="form-control-file" id="image" name="image">
 

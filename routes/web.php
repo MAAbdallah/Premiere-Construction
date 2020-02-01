@@ -29,6 +29,9 @@ Route::get('/sr/{id}','ServiceController@show')->name('service.show');
 Route::get('/test/create', 'TestimoialController@create');
 Route::post('/test','TestimoialController@store');
 
+Route::get('/blog/create', 'BlogController@create')->middleware('auth');
+Route::post('/blog','BlogController@store')->middleware('auth');
+Route::get('/blog/{id}','BlogController@show')->name('service.show');
 
 
 
