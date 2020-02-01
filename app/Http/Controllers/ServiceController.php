@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller
 {
     //
-    public function __construct()
+    /*public function __construct()
     {
         $this->middleware('auth');
-    }
+    }*/
 
     public function index()
     {
@@ -21,7 +21,6 @@ class ServiceController extends Controller
         #return view('home',compact('Services','count'));
     }
     public function show($id) {
-
         $service = service::find($id);
         return view('ServiceD.show', compact('service'));
     }

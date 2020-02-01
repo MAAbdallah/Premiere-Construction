@@ -279,6 +279,37 @@
         </div>
         <!--// Services Area -->
 
+        <!-- Testimonial Area -->
+        <div id="Accrediation" class="tm-section testimonial-area tm-padding-section bg-grey">
+            <div class="container">
+                <div class="row testimonial-slider-active">
+                    @foreach($Test as $test)
+                    <!-- Testimonial -->
+                    <div class="col-lg-6">
+                        <div class="tm-testimonial">
+                            <div class="tm-testimonial-top">
+                                <div class="tm-testimonial-author">
+                                    <img src="storage/{{$test->image}}" alt="author image">
+                                </div>
+                                <div class="tm-testimonial-content">
+                                    <p>{{$test->paragraph}}</p>
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                            </div>
+                            <div class="tm-testimonial-bottom">
+                                <h5>{{$test->name}}</h5>
+                                <p>{{$test->position}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// Testimonial -->
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        <!--// Testimonial Area -->
+
+
     </main>
     <!--// Main Content -->
 </div>

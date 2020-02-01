@@ -6,6 +6,7 @@ use App\aboutUs;
 use App\aboutUs_service;
 use App\service;
 use App\slider;
+use App\testimoial;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -30,6 +31,7 @@ class HomeController extends Controller
         $AboutUs_services = aboutUs_service::all();
         $Service = service::where('type','Service')->paginate(9);
         $feature = service::where('type','Feature')->get();
-        return view('home',compact('Sliders','AboutUs','AboutUs_services','Service','feature'));
+        $Test = testimoial::all();
+        return view('home',compact('Sliders','AboutUs','AboutUs_services','Service','feature','Test'));
     }
 }

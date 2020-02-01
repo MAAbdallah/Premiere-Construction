@@ -22,9 +22,12 @@ Route::post('/sl','SliderController@store');
 Route::get('/ab/create', 'AboutController@create');
 Route::post('/ab','AboutController@store');
 
-Route::get('/sr/create', 'ServiceController@create');
-Route::post('/sr','ServiceController@store');
+Route::get('/sr/create', 'ServiceController@create')->middleware('auth');
+Route::post('/sr','ServiceController@store')->middleware('auth');
 Route::get('/sr/{id}','ServiceController@show')->name('service.show');
+
+Route::get('/test/create', 'TestimoialController@create');
+Route::post('/test','TestimoialController@store');
 
 
 
