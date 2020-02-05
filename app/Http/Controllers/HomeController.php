@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\aboutUs;
 use App\aboutUs_service;
+use App\Blog;
 use App\service;
 use App\slider;
 use App\testimoial;
@@ -32,6 +33,7 @@ class HomeController extends Controller
         $Service = service::where('type','Service')->paginate(9);
         $feature = service::where('type','Feature')->get();
         $Test = testimoial::all();
-        return view('home',compact('Sliders','AboutUs','AboutUs_services','Service','feature','Test'));
+        $Blogs = Blog::all();
+        return view('home',compact('Sliders','AboutUs','AboutUs_services','Service','feature','Test','Blogs'));
     }
 }

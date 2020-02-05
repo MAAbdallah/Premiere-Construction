@@ -48,6 +48,35 @@
                             </ul>
                         </div>
                     </div>
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+                        @endguest
+                    </ul>
                     <div class="col-md-5 col-sm-4 col-12">
                         <div class="header-topsocial">
                             <ul>
@@ -324,23 +353,22 @@
                 </div>
             </div>
             <div class="row blog-slider-active">
-
+                @foreach($Blogs as $blog)
                 <!-- Single Blog -->
                 <div class="col">
                     <div class="tm-blog">
                         <div class="tm-blog-image">
-                            <img src="assets/images/blog/blog-image-1.jpg" alt="blog image">
+                            <img src="storage/{{$blog->image}}" alt="blog image">
                         </div>
                         <div class="tm-blog-content">
-                            <h4><a href="blog-details.html">A special day at the new office</a></h4>
+                            <h4><a href="blog-details.html">{{$blog->title}}</a></h4>
                             <div class="tm-blog-meta">
-                                <span>By <a href="blog.html">Keely</a></span>
-                                <span>Tuesday, Sep 26, 2018</span>
+                                <span>By <a href="blog.html">{{$blog->userName}}</a></span>
+                                <span>{{$blog->created_at}}</span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, in quodsi vulputat pro. Ius illum vocent mediocritatem
-                                an cule dicta iriure at phaedrum. </p>
+                            <p>{{$blog->paragraph}}</p>
                             <div class="tm-blog-contentbottom">
-                                <a href="blog-details.html" class="tm-readmore">Read more <i class="fas fa-chevron-right"></i></a>
+                                <a href="{{url('blog/'.$blog->id)}}" class="tm-readmore">Read more <i class="fas fa-chevron-right"></i></a>
                                 <a href="blog-details.html">Comment 02</a>
                             </div>
                         </div>
@@ -355,11 +383,10 @@
                     </div>
                 </div>
                 <!--// Single Blog -->
-
+                @endforeach
             </div>
         </div>
         <!--// Latest Blog Area -->
-
 
     </main>
     <!--// Main Content -->
